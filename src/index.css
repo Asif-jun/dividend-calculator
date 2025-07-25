@@ -1,13 +1,73 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Сброс стилей */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Глобальные стили для body */
+body {
+	font-family: 'Segoe UI', sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #333;
+	background-color: #fff;
+}
+
+.container {
+	max-width: 500px; /* Задаем максимальную ширину */
+	margin: 40px auto; /* Центрируем по горизонтали, задаем отступ сверху */
+	padding: 20px; /* Добавляем внутренние отступы */
+	border: 1px solid #ccc; /* Добавляем рамку */
+	border-radius: 8px; /* Скругляем углы */
+	background-color: #fafafa; /* Задаем светлый фон */
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 12px; /* Задаем отступы между элементами */
+}
+
+form div {
+	display: flex;
+	flex-direction: column; /* Располагаем label над input */
+}
+
+label {
+	margin-bottom: 4px; /* Задаем отступ снизу */
+	font-weight: 600; /* Делаем текст жирным */
+	font-size: 14px; /* Задаем размер шрифта */
+}
+
+input {
+	padding: 6px 8px; /* Добавляем внутренние отступы */
+	font-size: 14px; /* Задаем размер текста */
+	border: 1px solid #ccc; /* Добавляем рамку */
+	border-radius: 4px; /* Скругляем углы */
+}
+
+button {
+	align-self: center; /* Центрируем по горизонтали */
+	margin-top: 16px; /* Добавляем отступ сверху */
+	padding: 6px 12px; /* Отступы внутри кнопки */
+	font-size: 14px; /* Размер шрифта */
+	border: 1px solid #ccc; /* Рамка */
+	border-radius: 4px; /* Скругляем углы */
+	background-color: #fff; /* Фон */
+	cursor: pointer; /* Курсор при наведении */
+	transition: 0.2s ease; /* Плавность эффектов */
+}
+
+button:hover {
+	background-color: #e6e6e6; /* При наведении курсора на кнопку фон становится светло-серым */
+	border-color: #999; /* Цвет рамки становится более тёмным серым */
+}
+
+input:focus,
+button:focus {
+	outline: none; /* Убирает стандартную синюю рамку браузера при фокусе */
+	border-color: #007bff; /* Меняет цвет рамки на ярко-синий (цвет фокуса) */
+	box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2); /* Добавляет лёгкую синюю тень вокруг элемента для выделения */
 }
